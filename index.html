@@ -21,7 +21,20 @@
 
         function doSomething(e) {
             e.preventDefault();
-            alert('Something has been done.');
+            var alertMessage = 'تمت التجربة بنجاح - الحمدلله';
+            var alertTitle = 'تمام';
+            var alertButton = 'قم بعمل التجربة';
+            var alertCallback = function () {
+                console.log('native alert was dismissed');
+            };
+
+            try{
+                navigator.notification.alert(alertMessage, alertCallback, alertTitle, alertButton);
+                console.log('javascript alert was used');
+            }catch(error){
+                alert(alertMessage);
+                console.log('javascript alert was used');
+            }
         }
 
     </script>
