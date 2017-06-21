@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <title>Do Something 1 - PoneGap Demo</title>
+
+    <link rel="stylesheet" href="screen.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+    <script src="phonegap.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        window.onload = function () {
+            var myButton = document.getElementById('myButton');
+            myButton.addEventListener('click', doSomething);
+        };
+
+        function doSomething(e) {
+            e.preventDefault();
+            alert('Something has been done.');
+        }
+
+    </script>
+
+</head>
+<body>
+    <p><a href="#" class="button" id="myButton">We must do something!</a></p>
+    <p>
+        <small><em>Pure web app, no API access</em></small>
+    </p>
+</body>
+</html>
